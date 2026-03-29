@@ -39,7 +39,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollTo }: NavbarPr
                 <div className="hidden md:flex items-center gap-4">
                     <button
                         onClick={() => scrollTo('contact')}
-                        className="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors cursor-pointer"
+                        className="bg-slate-900 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors"
                     >
                         Let's Talk
                     </button>
@@ -47,7 +47,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollTo }: NavbarPr
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-slate-900 p-2 cursor-pointer"
+                    className="md:hidden text-slate-900 p-2"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
