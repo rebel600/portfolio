@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy } from "react";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 const Navbar = lazy(() => import("@/components/navbar"));
 const HeroSection = lazy(() => import("@/pages/hero-section"));
 const About = lazy(() => import("@/pages/about"));
@@ -52,6 +53,8 @@ const App = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useDocumentTitle();
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-200 selection:text-blue-900">

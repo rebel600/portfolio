@@ -1,3 +1,6 @@
+import projectOne from "@/assets/projectOne.png";
+import projectTwo from "@/assets/projectTwo.png";
+import portfolioImage from "@/assets/portfolioWebsite.png";
 import GenericCard from "@/components/generic-card";
 
 interface ProjectCard {
@@ -50,14 +53,14 @@ const genericCardContent: ProjectCard[] = [
     textColor: "text-indigo-600",
     content: {
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
-      imageAlt: "E-commerce Platform",
+        projectOne,
+      imageAlt: "WannaEat - Food Ordering Platform",
       tags: ["React", "Node.js", "MongoDB"],
-      title: "E-commerce Platform",
+      title: "WannaEat - Food Ordering Platform",
       description:
         "A full-stack e-commerce platform built with React, Node.js, and MongoDB.",
       ctaText: "Explore Project",
-      ctaHref: "#",
+      ctaHref: "https://www.wannaeat.com",
     },
   },
   {
@@ -65,14 +68,14 @@ const genericCardContent: ProjectCard[] = [
     textColor: "text-indigo-600",
     content: {
       image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000",
-      imageAlt: "Task Management App",
-      tags: ["React", "Express", "JWT"],
-      title: "Task Management App",
+       projectTwo,
+      imageAlt: "Compass - Budgeting Web App",
+      tags: ["React18", "Single (SPA)", "RTK"],
+      title: "Compass - Budgeting Web App",
       description:
-        "A simple yet powerful task management application built with React and Express.",
+        "A complex and powerful budgeting web application built with Micro-Frontend Architecture.",
       ctaText: "Explore Project",
-      ctaHref: "#",
+      ctaHref: "http://compass.equinoxys.com/",
     },
   },
   {
@@ -80,12 +83,12 @@ const genericCardContent: ProjectCard[] = [
     textColor: "text-indigo-600",
     content: {
       image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000",
+        portfolioImage,
       imageAlt: "Portfolio Website",
-      tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      tags: ["React", "Tailwind CSS", "Typescript"],
       title: "Portfolio Website",
       description:
-        "A modern and responsive portfolio website built with Next.js and Tailwind CSS.",
+        "A modern and responsive portfolio website built with React.js, Tailwind CSS and Typescript.",
       ctaText: "Explore Project",
       ctaHref: "#",
     },
