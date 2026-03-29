@@ -71,7 +71,7 @@ const HeroSection = ({ scrollTo }: HeroSectionProps) => {
             />
 
             {/* Floating Tag 1 */}
-            <div className="absolute top-12 -left-8 lg:-left-16 bg-white p-3 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 flex items-center gap-3 animate-float">
+            <div className="absolute -top-4 -left-8 lg:-left-16 bg-white p-3 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 flex items-center gap-3 animate-float">
               <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center">
                 <Layout className="w-5 h-5" />
               </div>
@@ -82,7 +82,7 @@ const HeroSection = ({ scrollTo }: HeroSectionProps) => {
             </div>
 
             {/* Floating Tag 2 */}
-            <div className="absolute bottom-20 -right-4 lg:-right-12 bg-white p-3 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 flex items-center gap-3 animate-float-delayed">
+            <div className="absolute sm:bottom-10 lg:bottom-20 -right-4 lg:-right-12 bg-white p-3 rounded-2xl shadow-xl shadow-slate-200/50 border border-slate-100 flex items-center gap-3 animate-float-delayed">
               <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center">
                 <Server className="w-5 h-5" />
               </div>
