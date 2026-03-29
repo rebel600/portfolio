@@ -1,0 +1,144 @@
+# Logs
+logs
+*.log
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Vite specific
+.vite/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.prettierignore
+.editorconfig
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Cache files
+.cache/
+.eslintcache
+.stylelintcache
+
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+temp/
+tmp/
+
+# IDE workspace settings
+*.sublime-workspace
+*.sublime-project
+
+# TypeScript
+tsconfig.json.bak
+*.tsbuildinfo
+
+# Production build files
+*.js.map
+*.css.map
+
+# macOS
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+$RECYCLE.BIN/
+ehthumbs.db
+
+# npm
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Vite dist folder
+/dist
+
+# Local environment overrides
+.env.local.example
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+.debugger
+
+# Development database (if applicable)
+*.db
+*.sqlite
+*.sqlite3
+
+# Compiled Python (if using Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code workspace
+.vscode-profile
+
+# turbo
+.turbo/
