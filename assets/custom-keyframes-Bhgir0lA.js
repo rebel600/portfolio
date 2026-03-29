@@ -1,7 +1,4 @@
-const CustomKeyframes = () => {
-    return (
-        <style dangerouslySetInnerHTML={{
-            __html: `
+import{t as e}from"./jsx-runtime-BciZLH0X.js";import{t}from"./index-sYHT4Roc.js";var n=t(),r=e(),i=()=>{let e=(0,n.c)(1),t;return e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=(0,r.jsx)(`style`,{dangerouslySetInnerHTML:{__html:`
         @keyframes blob {
           0% { transform: translate(0px, 0px) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }
@@ -25,8 +22,4 @@ const CustomKeyframes = () => {
         .animate-float-delayed {
           animation: float 4s ease-in-out 2s infinite;
         }
-      `}} />
-    )
-}
-
-export default CustomKeyframes
+      `}}),e[0]=t):t=e[0],t};export{i as default};
