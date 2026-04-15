@@ -5,6 +5,7 @@ import {
   Layout,
   Terminal,
   FileJson,
+  DatabaseBackup,
 } from "lucide-react";
 import developerImage from "@/assets/developerImage.png";
 
@@ -80,6 +81,24 @@ const About = () => {
                 icon: Layout,
                 color: "text-cyan-500",
                 bg: "bg-cyan-50",
+              },
+              {
+                name: "Next.js",
+                icon: Code2,
+                color: "text-slate-700",
+                bg: "bg-slate-50",
+              },
+              {
+                name: "TypeScript",
+                icon: FileJson,
+                color: "text-blue-600",
+                bg: "bg-blue-50",
+              },
+              {
+                name: "PostgreSQL",
+                icon: DatabaseBackup,
+                color: "text-sky-500",
+                bg: "bg-sky-50",
               },
             ].map((skill, index) => (
               <div
