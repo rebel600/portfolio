@@ -25,13 +25,11 @@ const HeroSection = ({ scrollTo }: HeroSectionProps) => {
         {/* Left Content */}
         <div className="flex flex-col gap-6 relative z-10 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 w-fit text-sm font-medium border border-blue-100 dark:border-blue-800/50">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 w-fit text-sm font-medium border border-blue-100">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-              </span>
-              Available for new opportunities
-            </div>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            Available for new opportunities
           </div>
 
           <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900 dark:text-white">
@@ -57,6 +55,8 @@ const HeroSection = ({ scrollTo }: HeroSectionProps) => {
               <a
                 href="https://github.com/rebel600"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile"
                 className="p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-200 dark:hover:border-blue-800 transition-colors shadow-sm"
               >
                 <GitBranch className="w-5 h-5" />
@@ -64,6 +64,8 @@ const HeroSection = ({ scrollTo }: HeroSectionProps) => {
               <a
                 href="https://www.linkedin.com/in/shyampandiya/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Linkedin profile"
                 className="p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-200 dark:hover:border-blue-800 transition-colors shadow-sm"
               >
                 <Link className="w-5 h-5" />

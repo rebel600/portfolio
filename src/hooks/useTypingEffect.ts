@@ -4,7 +4,7 @@ export const useTypingEffect = (
   words: string[],
   typingSpeed = 100,
   deletingSpeed = 40,
-  delay = 1000
+  delay = 1200
 ) => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);

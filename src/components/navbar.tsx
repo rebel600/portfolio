@@ -88,19 +88,20 @@ const Navbar = ({
 
       {/* Mobile Nav */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 p-6 flex flex-col gap-4 shadow-xl cursor-pointer">
+        <div  className="md:hidden absolute top-20 left-0 w-full bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-4 shadow-xl cursor-pointer">
           {["Home", "About", "Services", "Projects", "Contact"].map((item) => (
             <button
               key={item}
               onClick={() => scrollTo(item.toLowerCase())}
-              className="text-left text-lg font-medium text-slate-600 hover:text-blue-600"
+               className="text-left text-lg font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400"
+              aria-label="Toggle Dark Mode"
             >
               {item}
             </button>
           ))}
           <button
             onClick={() => scrollTo("contact")}
-            className="mt-4 bg-blue-600 text-white px-6 py-3 rounded-full text-center font-medium"
+            className="mt-4 bg-blue-600 dark:bg-white text-white dark:text-slate-800 px-6 py-3 rounded-full text-center font-medium hover:bg-blue-700 dark:hover:bg-blue-400 dark:hover:text-white transition-colors"
           >
             Let's Talk
           </button>

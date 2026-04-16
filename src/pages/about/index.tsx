@@ -1,17 +1,12 @@
-import {
-  Code2,
-  Database,
-  Server,
-  Layout,
-  Terminal,
-  FileJson,
-  DatabaseBackup,
-} from "lucide-react";
+import { developerSkills } from "@/utils/skills";
 import developerImage from "@/assets/developerImage.png";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <section
+      id="about"
+      className="py-24 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* About Text */}
@@ -45,63 +40,11 @@ const About = () => {
 
           {/* Skills Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {[
-              {
-                name: "MongoDB",
-                icon: Database,
-                color: "text-green-600 dark:text-green-400",
-                bg: "bg-green-50 dark:bg-green-900/30",
-              },
-              {
-                name: "Express.js",
-                icon: Server,
-                color: "text-slate-700 dark:text-slate-300",
-                bg: "bg-slate-100 dark:bg-slate-800",
-              },
-              {
-                name: "React.js",
-                icon: Code2,
-                color: "text-blue-500 dark:text-blue-400",
-                bg: "bg-blue-50 dark:bg-blue-900/30",
-              },
-              {
-                name: "Node.js",
-                icon: Terminal,
-                color: "text-green-700 dark:text-green-500",
-                bg: "bg-green-50 dark:bg-green-900/30",
-              },
-              {
-                name: "JavaScript",
-                icon: FileJson,
-                color: "text-yellow-600 dark:text-yellow-500",
-                bg: "bg-yellow-50 dark:bg-yellow-900/30",
-              },
-              {
-                name: "Tailwind CSS",
-                icon: Layout,
-                color: "text-cyan-500 dark:text-cyan-400",
-                bg: "bg-cyan-50 dark:bg-cyan-900/30",
-              },
-              {
-                name: "Next.js",
-                icon: Code2,
-                color: "text-slate-500 dark:slate-400",
-                bg: "bg-slate-50 dark:bg-slate-900/30",
-              },
-              {
-                name: "TypeScript",
-                icon: FileJson,
-                color: "text-blue-600 dark:text-blue-500",
-                bg: "bg-blue-50 dark:bg-blue-900/30",
-              },
-              {
-                name: "PostgreSQL",
-                icon: DatabaseBackup,
-                color: "text-sky-500 dark:text-sky-400",
-                bg: "bg-sky-50 dark:bg-sky-900/30",
-              },
-            ].map((skill, index) => (
-              <div key={index} className="group p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 hover:border-slate-200 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center">
+            {developerSkills.map((skill, index) => (
+              <div
+                key={index}
+                className="group p-6 rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 hover:border-slate-200 dark:hover:border-slate-700 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-none transition-all duration-300 flex flex-col items-center justify-center gap-3 text-center"
+              >
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center ${skill.bg} ${skill.color} group-hover:scale-110 transition-transform duration-300`}
                 >
