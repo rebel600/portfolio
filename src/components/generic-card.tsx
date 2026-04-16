@@ -57,11 +57,11 @@ export const GenericCard: React.FC<GenericCardProps> = ({
 
   return (
     <div
-      className={`${bgColor} rounded-4xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 group cursor-pointer`}
+      className={`${bgColor} rounded-4xl dark:bg-slate-900 overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-black/50 cursor-pointer`}
     >
       {/* Image Section */}
       {image && (
-        <div className="relative h-60 overflow-hidden bg-slate-200">
+        <div className="relative h-60 overflow-hidden bg-slate-200 dark:bg-slate-800">
           <img
             src={image}
             alt={imageAlt}
