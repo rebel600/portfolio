@@ -37,16 +37,16 @@ const ContactInfo = () => {
 
       <div className="flex gap-4 mt-12">
         {[
-          { Icon: GitBranch, link: "https://github.com/rebel600" },
-          { Icon: Link, link: "https://linkedin.com/in/shyampandiya/" },
-          { Icon: AtSign, link: "https://x.com/pandiyoji" },
-        ].map(({ Icon, link }, i) => (
+          { Icon: GitBranch, link: "https://github.com/rebel600", label: "GitHub" },
+          { Icon: Link, link: "https://linkedin.com/in/shyampandiya/", label: "LinkedIn" },
+          { Icon: AtSign, link: "https://x.com/pandiyoji", label: "X" },
+        ].map(({ Icon, link, label }, i) => (
           <a
             key={i}
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`Social Link: ${i}`}
+            aria-label={label}
             className="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors shadow-md shadow-slate-200"
           >
             <Icon className="w-5 h-5" />

@@ -109,7 +109,7 @@ const ChatWidget = () => {
             ))}
             {isChatLoading && (
               <div className="self-start flex gap-3 max-w-[85%]">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-white  dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm">
                   <Bot size={16} />
                 </div>
                 <div className="p-3 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-tl-sm flex items-center">
