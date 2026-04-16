@@ -19,11 +19,11 @@ interface ProjectCard {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-slate-50">
+    <section id="projects" className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-end mb-16">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               Featured Projects
             </h2>
             <div className="w-20 h-1.5 bg-blue-600 rounded-full"></div>
@@ -50,7 +50,7 @@ export default Projects;
 const genericCardContent: ProjectCard[] = [
   {
     bgColor: "bg-white",  
-    textColor: "text-indigo-600",
+    textColor: "text-slate-600",
     content: {
       image:
         projectOne,
@@ -65,7 +65,7 @@ const genericCardContent: ProjectCard[] = [
   },
   {
     bgColor: "bg-white",
-    textColor: "text-indigo-600",
+    textColor: "text-slate-600",
     content: {
       image:
        projectTwo,
@@ -80,7 +80,7 @@ const genericCardContent: ProjectCard[] = [
   },
   {
     bgColor: "bg-white",
-    textColor: "text-indigo-600",
+    textColor: "text-slate-600",
     content: {
       image:
         portfolioImage,

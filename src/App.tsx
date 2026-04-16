@@ -1,5 +1,6 @@
 import { useState, useEffect, lazy } from "react";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { useThemeContext } from "./context/theme-provider";
 const Navbar = lazy(() => import("@/components/navbar"));
 const HeroSection = lazy(() => import("@/pages/hero-section"));
 const About = lazy(() => import("@/pages/about"));
@@ -11,11 +12,12 @@ const TermsOfService = lazy(() => import("./pages/terms-of-service"));
 const ChatWidget = lazy(() => import("@/components/chat-widget"));
 const Footer = lazy(() => import("@/components/footer"));
 const CustomKeyframes = lazy(() => import("@/components/custom-keyframes"));
-
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [currentPage, setCurrentPage] = useState("home");
+
+  const { isDarkMode } = useThemeContext();
 
   const navigateToPage = (page: string) => {
     setCurrentPage(page);
@@ -57,51 +59,53 @@ const App = () => {
   useDocumentTitle();
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-200 selection:text-blue-900">
-      {/* Navigation */}
-      <Navbar
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-        activeSection={activeSection}
-        scrollTo={scrollTo}
-      />
-      {currentPage === "home" && (
-        <main className="pt-20">
-          {/* HERO SECTION */}
-          <HeroSection scrollTo={scrollTo} />
+    <div className={`${isDarkMode ? "dark" : ""}`}>
+      <div className="min-h-screen dark:bg-slate-950 text-slate-900 dark:text-slate-50 font-sans selection:bg-blue-200 dark:selection:bg-blue-900 selection:text-blue-900 dark:selection:text-blue-100 flex flex-col transition-colors duration-300">
+        {/* Navigation */}
+        <Navbar
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          activeSection={activeSection}
+          scrollTo={scrollTo}
+        />
+        {currentPage === "home" && (
+          <main className="pt-20">
+            {/* HERO SECTION */}
+            <HeroSection scrollTo={scrollTo} />
 
-          {/* ABOUT & SKILLS SECTION */}
-          <About />
+            {/* ABOUT & SKILLS SECTION */}
+            <About />
 
-          {/* SERVICES SECTION */}
-          <Services />
+            {/* SERVICES SECTION */}
+            <Services />
 
-          {/* PROJECTS SECTION */}
-          <Projects />
+            {/* PROJECTS SECTION */}
+            <Projects />
 
-          {/* CONTACT SECTION */}
-          <Contact />
-        </main>
-      )}
+            {/* CONTACT SECTION */}
+            <Contact />
+          </main>
+        )}
 
-      {/* PRIVACY POLICY PAGE */}
-      {currentPage === "privacy" && (
-        <PrivacyindexPolicy navigateToPage={navigateToPage} />
-      )}
+        {/* PRIVACY POLICY PAGE */}
+        {currentPage === "privacy" && (
+          <PrivacyindexPolicy navigateToPage={navigateToPage} />
+        )}
 
-      {/* TERMS OF SERVICE PAGE */}
-      {currentPage === "terms" && (
-        <TermsOfService navigateToPage={navigateToPage} />
-      )}
+        {/* TERMS OF SERVICE PAGE */}
+        {currentPage === "terms" && (
+          <TermsOfService navigateToPage={navigateToPage} />
+        )}
 
-      {/* Floating Chat Widget */}
-      <ChatWidget />
+        {/* Floating Chat Widget */}
+        <ChatWidget />
 
-      {/* FOOTER */}
-      <Footer navigateToPage={navigateToPage} />
+        {/* FOOTER */}
+        <Footer navigateToPage={navigateToPage} />
 
-      {/* Custom Keyframes for Animations */}
-      <CustomKeyframes />
+        {/* Custom Keyframes for Animations */}
+        <CustomKeyframes />
+      </div>
     </div>
   );
 };
