@@ -76,8 +76,8 @@ const ChatWidget = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {chatOpen && (
-        <div className="bg-white border border-slate-200 shadow-2xl rounded-2xl w-[calc(100vw-3rem)] sm:w-96 mb-4 overflow-hidden flex flex-col transition-all">
-          <div className="bg-slate-900 text-white p-4 flex items-center justify-between">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl dark:shadow-black/50 rounded-2xl w-[calc(100vw-3rem)] sm:w-96 mb-4 overflow-hidden flex flex-col transition-all">
+          <div className="bg-slate-900 dark:bg-slate-950 text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-blue-400" />
               <h3 className="font-bold">AI Assistant</h3>
@@ -89,19 +89,19 @@ const ChatWidget = () => {
               <X className="w-5 h-5" />
             </button>
           </div>
-          <div className="h-80 overflow-y-auto p-4 flex flex-col gap-4 bg-slate-50">
+          <div className="h-80 overflow-y-auto p-4 flex flex-col gap-4 bg-slate-50 dark:bg-slate-950">
             {chatMessages.map((msg, idx) => (
               <div
                 key={idx}
                 className={`flex gap-3 max-w-[85%] ${msg.role === "user" ? "self-end flex-row-reverse" : "self-start"}`}
               >
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 shadow-sm ${msg.role === "user" ? "bg-blue-600 text-white" : "bg-white border border-slate-200 text-indigo-600"}`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 shadow-sm ${msg.role === "user" ? "bg-blue-600 text-white" : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400"}`}
                 >
                   {msg.role === "user" ? <User size={16} /> : <Bot size={16} />}
                 </div>
                 <div
-                  className={`p-3 rounded-2xl text-sm leading-relaxed ${msg.role === "user" ? "bg-blue-600 text-white rounded-tr-sm" : "bg-white border border-slate-200 text-slate-700 rounded-tl-sm shadow-sm"}`}
+                  className={`p-3 rounded-2xl text-sm leading-relaxed ${msg.role === "user" ? "bg-blue-600 text-white rounded-tr-sm" : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 rounded-tl-sm shadow-sm"}`}
                 >
                   {msg.text}
                 </div>
@@ -109,23 +109,23 @@ const ChatWidget = () => {
             ))}
             {isChatLoading && (
               <div className="self-start flex gap-3 max-w-[85%]">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 bg-white border border-slate-200 text-indigo-600 shadow-sm">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-600 dark:text-indigo-400 shadow-sm">
                   <Bot size={16} />
                 </div>
-                <div className="p-3 rounded-2xl bg-white border border-slate-200 shadow-sm rounded-tl-sm flex items-center">
-                  <Loader2 className="w-4 h-4 animate-spin text-slate-400" />
+                <div className="p-3 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-tl-sm flex items-center">
+                  <Loader2 className="w-4 h-4 animate-spin text-slate-400 dark:text-slate-500" />
                 </div>
               </div>
             )}
           </div>
-          <div className="p-3 bg-white border-t border-slate-100">
+          <div className="p-3 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
             <form onSubmit={handleChatSubmit} className="flex gap-2">
               <input
                 type="text"
                 value={chatInput}
                 onChange={(e) => setChatInput(e.target.value)}
                 placeholder="Ask about my skills..."
-                className="flex-1 px-4 py-2 bg-slate-100 border border-transparent rounded-full text-sm focus:outline-none focus:border-blue-500 focus:bg-white transition-all"
+                className="flex-1 px-4 py-2 bg-slate-100 dark:bg-slate-800 border border-transparent rounded-full text-sm text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500 focus:bg-white dark:focus:bg-slate-900 transition-all"
               />
               <button
                 type="submit"
@@ -141,7 +141,7 @@ const ChatWidget = () => {
 
       <button
         onClick={() => setChatOpen(!chatOpen)}
-        className="bg-slate-900 text-white p-4 rounded-full shadow-xl shadow-slate-900/20 hover:scale-105 transition-transform flex items-center justify-center relative group z-50"
+        className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 p-4 rounded-full shadow-xl shadow-slate-900/20 dark:shadow-white/10 hover:scale-105 transition-transform flex items-center justify-center relative group z-50"
       >
         {chatOpen ? (
           <X className="w-6 h-6" />

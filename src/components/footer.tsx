@@ -4,7 +4,7 @@ const Footer = ({
   navigateToPage: (page: string) => void;
 }) => {
   return (
-    <footer className="bg-slate-900 py-8 border-t border-slate-800">
+    <footer className="bg-slate-900 dark:bg-slate-950 py-8 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-slate-400 text-sm">
           © {new Date().getFullYear()} MERN Developer. All rights reserved.

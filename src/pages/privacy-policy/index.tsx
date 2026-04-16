@@ -6,27 +6,27 @@ const PrivacyindexPolicy = ({
   navigateToPage: (page: string) => void;
 }) => {
   return (
-    <section className="py-24 bg-white min-h-[80vh]">
+    <section className="py-24 bg-white min-h-[80vh] dark:bg-slate-900">
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <button
           onClick={() => navigateToPage("home")}
-          className="inline-flex items-center gap-2 text-blue-600 font-semibold mb-8 hover:text-blue-700 transition-colors group"
+          className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold mb-8 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />{" "}
           Back to Portfolio
         </button>
 
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">
+        <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
           Privacy Policy
         </h1>
         <div className="w-20 h-1.5 bg-blue-600 rounded-full mb-8"></div>
 
-        <div className="prose prose-slate max-w-none text-slate-600 space-y-6">
+        <div className="prose prose-slate max-w-none text-slate-600 dark:prose-invert dark:text-slate-400 space-y-6">
           <p>
             <strong>Effective Date:</strong> {new Date().toLocaleDateString()}
           </p>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-8">
             1. Information We Collect
           </h3>
           <p>
@@ -52,7 +52,7 @@ const PrivacyindexPolicy = ({
             </li>
           </ul>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-8">
             2. How We Use Your Information
           </h3>
           <p>
@@ -70,7 +70,7 @@ const PrivacyindexPolicy = ({
             <li>To maintain and optimize the performance of the portfolio.</li>
           </ul>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-8">
             3. Third-Party Services
           </h3>
           <p>
@@ -82,7 +82,7 @@ const PrivacyindexPolicy = ({
             information to outside parties for marketing purposes.
           </p>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-8">
             4. Data Security
           </h3>
           <p>
@@ -92,7 +92,7 @@ const PrivacyindexPolicy = ({
             internet is 100% secure.
           </p>
 
-          <h3 className="text-xl font-bold text-slate-900 mt-8">5. Contact</h3>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-8">5. Contact</h3>
           <p>
             If you have any questions regarding this Privacy Policy, you may
             contact me at: shyam.mern@gmail.com
