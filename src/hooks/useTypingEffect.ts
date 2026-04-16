@@ -4,34 +4,45 @@ export const useTypingEffect = (
   words: string[],
   typingSpeed = 100,
   deletingSpeed = 40,
-  delay = 1200
+  delay = 1200,
 ) => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    
+    if (words.length === 0) return;
+
     const currentWord = words[index];
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setText(currentWord.substring(0, text.length + 1));
+    const atEndOfWord = !isDeleting && text === currentWord;
+    const atStartOfWord = isDeleting && text === "";
 
-        if (text === currentWord) {
-          setTimeout(() => setIsDeleting(true), delay);
-        }
-      } else {
-        setText(currentWord.substring(0, text.length - 1));
-
-        if (text === "") {
-          setIsDeleting(false);
-          setIndex((prev) => (prev + 1) % words.length);
-        }
+    const tick = () => {
+      if (atEndOfWord) {
+        setIsDeleting(true);
+        return;
       }
-    }, isDeleting ? deletingSpeed : typingSpeed);
+      if (atStartOfWord) {
+        setIsDeleting(false);
+        setIndex((prev) => (prev + 1) % words.length);
+        return;
+      }
+      setText(
+        isDeleting
+          ? currentWord.substring(0, text.length - 1)
+          : currentWord.substring(0, text.length + 1),
+      );
+    };
+
+    const timeout = setTimeout(
+      tick,
+      atEndOfWord ? delay : isDeleting ? deletingSpeed : typingSpeed,
+    );
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, index]);
+  }, [text, isDeleting, index, words, typingSpeed, deletingSpeed, delay]);
 
   return text;
 };
