@@ -1,7 +1,7 @@
 import projectOne from "@/assets/projectOne.png";
 import projectTwo from "@/assets/projectTwo.png";
 import portfolioImage from "@/assets/portfolioWebsite.png";
-import GenericCard from "@/components/generic-card";
+import GenericCard from "@/components/GenericCard";
 
 interface ProjectCard {
   bgColor: string;
