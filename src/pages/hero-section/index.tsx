@@ -9,13 +9,15 @@ interface HeroSectionProps {
 const HeroSection = ({ scrollTo }: HeroSectionProps) => {
   const text = useTypingEffect([
     "Shyam Pareek",
-    "MERN Stack Developer",
+    "Content Creartor",
     "Frontend Engineer",
+    "Native App Developer",
+    "MERN Stack Developer",
   ]);
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Subtle animated background elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 dark:bg-blue-900/40 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-20 animate-blob transition-colors duration-500"></div>
