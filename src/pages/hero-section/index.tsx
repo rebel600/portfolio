@@ -9,7 +9,7 @@ interface HeroSectionProps {
 const HeroSection = ({ scrollTo }: HeroSectionProps) => {
   const text = useTypingEffect([
     "Shyam Pareek",
-    "Content Creartor",
+    "Content Creator",
     "Frontend Engineer",
     "Native App Developer",
     "MERN Stack Developer",
