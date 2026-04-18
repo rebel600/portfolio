@@ -1,4 +1,4 @@
-import { developerSkills } from "@/utils/skills";
+import { developerSkills } from "@/utils/mock";
 import developerImage from "@/assets/developerImage.png";
 
 const About = () => {

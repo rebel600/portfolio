@@ -5,6 +5,7 @@ import {
   Layout,
   Terminal,
   FileJson,
+  FlaskConical,
   DatabaseBackup,
 } from "lucide-react";
 
@@ -62,5 +63,38 @@ export const developerSkills = [
     icon: DatabaseBackup,
     color: "text-sky-500 dark:text-sky-400",
     bg: "bg-sky-50 dark:bg-sky-900/30",
+  },
+];
+
+export const developerServices = [
+  {
+    title: "Frontend Development",
+    desc: "Building responsive, interactive, and highly optimized user interfaces using React.js and modern CSS frameworks.",
+    icon: Layout,
+    color: "text-blue-400",
+  },
+  {
+    title: "Backend Development",
+    desc: "Designing robust and scalable server-side logic, databases, and architecture using Node.js, Express, and MongoDB.",
+    icon: Server,
+    color: "text-emerald-400",
+  },
+  {
+    title: "REST API Design",
+    desc: "Creating secure, well-documented, and efficient RESTful APIs to connect your frontend with your data layer.",
+    icon: Database,
+    color: "text-purple-400",
+  },
+  // {
+  //     title: 'Full-Stack Integration',
+  //     desc: 'Seamlessly connecting MongoDB databases, Express servers, and React frontends for cohesive web applications.',
+  //     icon: Code2,
+  //     color: 'text-amber-400'
+  // },
+  {
+    title: "End-to-End Testing",
+    desc: `Validating entire application workflows to ensure a bug-free experience from the user's perspective.`,
+    icon: FlaskConical,
+    color: "text-yellow-400",
   },
 ];
