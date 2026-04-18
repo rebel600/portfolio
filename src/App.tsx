@@ -2,7 +2,7 @@ import { useState, useEffect, lazy } from "react";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { useThemeContext } from "./context/theme-provider";
 const AnimateMouse  = lazy(() => import("@/components/AnimateMouse"));
-const Navbar = lazy(() => import("@/components/Navbar"));
+const Navbar = lazy(() => import("@/components/navbar"));
 const HeroSection = lazy(() => import("@/pages/hero-section"));
 const About = lazy(() => import("@/pages/about"));
 const Services = lazy(() => import("@/pages/services"));
@@ -11,7 +11,7 @@ const Contact = lazy(() => import("@/pages/contact"));
 const PrivacyindexPolicy = lazy(() => import("./pages/privacy-policy"));
 const TermsOfService = lazy(() => import("./pages/terms-of-service"));
 const ChatWidget = lazy(() => import("@/components/ChatWidget"));
-const Footer = lazy(() => import("@/components/Footer"));
+const Footer = lazy(() => import("@/components/footer"));
 const CustomKeyframes = lazy(() => import("@/components/CustomKeyframes"));
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
