@@ -1,7 +1,7 @@
 import projectOne from "@/assets/projectOne.png";
 import projectTwo from "@/assets/projectTwo.png";
 import portfolioImage from "@/assets/portfolioWebsite.png";
-import GenericCard from "@/components/generic-card";
+import GenericCard from "@/components/GenericCard";
 
 interface ProjectCard {
   bgColor: string;
@@ -19,7 +19,10 @@ interface ProjectCard {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section
+      id="projects"
+      className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-end mb-16">
           <div>
@@ -49,11 +52,10 @@ export default Projects;
 
 const genericCardContent: ProjectCard[] = [
   {
-    bgColor: "bg-white",  
+    bgColor: "bg-white",
     textColor: "text-slate-600",
     content: {
-      image:
-        projectOne,
+      image: projectOne,
       imageAlt: "WannaEat - Food Ordering Platform",
       tags: ["React", "Node.js", "MongoDB"],
       title: "WannaEat - Food Ordering Platform",
@@ -67,23 +69,20 @@ const genericCardContent: ProjectCard[] = [
     bgColor: "bg-white",
     textColor: "text-slate-600",
     content: {
-      image:
-       projectTwo,
-      imageAlt: "Compass - Budgeting Web App",
-      tags: ["React18", "Single (SPA)", "RTK"],
-      title: "Compass - Budgeting Web App",
-      description:
-        "A complex and powerful budgeting web application built with Micro-Frontend Architecture.",
+      image: projectTwo,
+      imageAlt: "Escapely - Escape the City",
+      tags: ["React", "ReduxToolKit", "MongoDB"],
+      title: "Escapely - Escape the City",
+      description: `Helped craft a seamless, "no-download" web app experience that bridges the gap between physical puzzle assets and real-world environments. Focused on creating an intuitive hint system and interactive storyline interface that allows users to navigate urban landscapes while solving complex, multi-layered puzzles.`,
       ctaText: "Explore Project",
-      ctaHref: "http://compass.equinoxys.com/",
+      ctaHref: "https://escapely.com/escape-the-city",
     },
   },
   {
     bgColor: "bg-white",
     textColor: "text-slate-600",
     content: {
-      image:
-        portfolioImage,
+      image: portfolioImage,
       imageAlt: "Portfolio Website",
       tags: ["React", "Tailwind CSS", "Typescript"],
       title: "Portfolio Website",
