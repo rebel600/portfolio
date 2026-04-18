@@ -5,9 +5,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300"
+      className="bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300 min-h-[95vh]"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="py-24 max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* About Text */}
           <div className="space-y-8">
@@ -35,6 +35,9 @@ const About = () => {
               problems and resolving them into clean, scalable solutions. I am a
               quick learner, constantly exploring new technologies to improve my
               craft.
+            </p>
+            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              Whether I’m architecting a complex database or fine-tuning a responsive interface, my goal is always to deliver future-proof solutions that can grow alongside your business goals.
             </p>
           </div>
 
